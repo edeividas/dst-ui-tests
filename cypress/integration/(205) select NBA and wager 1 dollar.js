@@ -18,13 +18,13 @@ describe('Betbuilder - select NBA and place wager for 1 dollar', function () {
         cy.get('.main-markets__item').find('p').contains('Points').click(); // click on Points market
         cy.get('.main-markets__item').invoke('text').then((text) => {
             cy.log(text);
-            if (text.toLowerCase() === 'all markets') {
+            if (text.trim().toLowerCase() === 'all markets') {
                 // single game is selected so Points markets on this game should already be "opened"
                 cy.get('.props').get('div').first().click();
             } else {
                 // more than 1 game available ("All Games" in dropdown) so need to select a game first
                 cy.get('.tiered-block__item__top').first().click({ force: true }); // click on first game btn
-                cy.get('.props').get('div').first().click();
+                cy.get('.shots-slider__item').first().click();
             }
         });
     });
