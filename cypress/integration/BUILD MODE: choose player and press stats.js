@@ -3,7 +3,7 @@ describe('learning' , function ()
     it('press player stats', function () {
 
 
-        cy.visit('https://widgets-bm.dev.digitalsportstech.com/betbuilder?sb=test')
+        cy.visit('https://widgets-bm.dev.digitalsportstech.com/betbuilder?sb=test&demo=true')
         //cy.get('.icon-a-football').first().click(); // nuorodos visose lygose tos pačios todėl reikia nurodyt lygos ikoną norint ką atodayti
         cy.wait(5000); //kadangi puslapis per greit atsidaro reikia uždėti ilgesnį laukimą kad testas spėtų kartu su puslapiu
         cy.intercept('GET','/api/player/playersByGame*').as(`arq`); // test body po get raso pilna API, būtina parasyti pilna GET pavadinimą

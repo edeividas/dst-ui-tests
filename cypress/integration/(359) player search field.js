@@ -1,7 +1,7 @@
 describe('BB+widgets' , function ()
 {
     it('player search field', function () {
-        cy.visit('https://widgets-bm.dev.digitalsportstech.com/betbuilder?sb=test')
+        cy.visit('https://widgets-bm.dev.digitalsportstech.com/betbuilder?sb=test&demo=true')
         cy.wait(2000);
         cy.intercept('GET','/api/player/playersByGame*').as(`arq`)
         cy.get('.banner-menu__build-button').click()
