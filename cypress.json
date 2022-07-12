@@ -1,6 +1,0 @@
-{
-  "video": false,
-  "responseTimeout": 30000,
-  "requestTimeout": 15000,
-  "baseUrl": "https://widgets-bm.dev.digitalsportstech.com"
-}
