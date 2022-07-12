@@ -1,7 +1,7 @@
 describe('BB+widgets' , function ()
 {
     it('check wizard active markets', function () {
-        cy.visit('https://widgets-bm.dev.digitalsportstech.com/betbuilder?sb=test')
+        cy.visit('https://widgets-bm.dev.digitalsportstech.com/betbuilder?sb=test&demo=true')
         cy.wait(3000);
         cy.get('.main-markets__item').eq(1).click();
         cy.intercept('GET','/api/game-props/marketsByGp*').as(`arq`);
