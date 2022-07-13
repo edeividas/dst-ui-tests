@@ -53,25 +53,24 @@ describe('Betbuilder - place bet wager for 1 dollar', function () {
         });
     });
 
-    // it('place a bet for 1 dollar', function () {
-    //         cy.get('.bat-slip').should('have.class', 'show-betslip'); // check betslip is open
-    //         cy.get('input').click().type('1');
-    //         cy.intercept('POST', '**/api/bet*').as(`betPlace`); // expect our req to be sent. add intercept before action.
-    //         cy.get('.bat-slip__item__block-btn__btn').click(); // single bet
-    //         cy.get('.btn-confirm').click(); // click place
-    //         cy.wait('@betPlace').its('response.statusCode').should('eq', 201);
-    //         //cy.wait('@arq',{responseTimeout:10000}).its('response.body').should('include','id')
-    //     });
-    // });
+    it('place a bet for 1 dollar', function () {
+        cy.get('.bat-slip').should('have.class', 'show-betslip'); // check betslip is open
+        cy.get('input').click().type('1');
+        cy.intercept('POST', '**/api/bet*').as(`betPlace`); // expect our req to be sent. add intercept before action.
+        cy.get('.bat-slip__item__block-btn__btn').click(); // single bet
+        cy.get('.btn-confirm').click(); // click place
+        cy.wait('@betPlace').its('response.statusCode').should('eq', 201);
+        //cy.wait('@arq',{responseTimeout:10000}).its('response.body').should('include','id')
+    });
 
-    // it('placed the bet successfully', function () {
-    //     cy.log('checking if it placed and shows successful confirmation');
-    //     cy.get('.success'); // just checks for a "success" class anywhere
-    // });
-    //
-    // it('fetched max exposure after place bet', function () {
-    //     cy.log('checking if it fetches max exposure after placing bet');
-    //     cy.wait('@maxExposure').its('response.statusCode').should('eq', 201);
-    // });
+    it('placed the bet successfully', function () {
+        cy.log('checking if it placed and shows successful confirmation');
+        cy.get('.success'); // just checks for a "success" class anywhere
+    });
+
+    it('fetched max exposure after place bet', function () {
+        cy.log('checking if it fetches max exposure after placing bet');
+        cy.wait('@maxExposure').its('response.statusCode').should('eq', 201);
+    });
 
 });
