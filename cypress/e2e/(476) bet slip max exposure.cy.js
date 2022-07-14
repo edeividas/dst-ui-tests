@@ -1,6 +1,6 @@
-describe('BB+widgets' , function ()
+describe('BBv2 cheks max exposure' , function ()
 {
-    it('clear button in BYB', function () {
+    it('cheks max exposure', function () {
         cy.visit('https://widgets-bm.dev.digitalsportstech.com/betbuilder?sb=test&demo=true')
         cy.wait(2000);
         cy.intercept('GET','/api/player/playersByGame*').as(`arq`)

@@ -2,7 +2,7 @@ const dayjs = require("dayjs");
 const todaysDate = dayjs().format("MMM DD, YYYY");
 const Timenow12hours = dayjs().format("hh:mm:ss a");
 
-describe('BB+widgets' , function ()
+describe('BBv2' , function ()
 {
     it('clear button in BYB', function () {
         cy.log(todaysDate)

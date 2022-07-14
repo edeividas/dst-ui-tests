@@ -1,6 +1,6 @@
-describe('BB+widgets' , function ()
+describe('BBV2' , function ()
 {
-    it('clear button in BYB', function () {
+    it('Cheks past bets', function () {
         cy.visit('https://widgets-bm.dev.digitalsportstech.com/betbuilder?sb=test&demo=true')
         cy.wait(5000);
         cy.intercept('GET','/api/player/playersByGame*').as(`arq`)

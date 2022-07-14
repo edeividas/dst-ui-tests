@@ -22,6 +22,7 @@ describe('Betbuilder - check DFM length equal to Market categories displayed', f
             const lengthDfm = allMarkets ? (res.length + 1) : res.length;
             cy.log('Length of DFM markets is ' + lengthDfm);
             cy.log('Full amount of market elements detected is ' + (Number(this.visibleMarkets) + Number(this.dropdownMarkets)));
+
         });
     });
 

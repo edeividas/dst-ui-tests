@@ -6,7 +6,7 @@ describe('BB+widgets' , function ()
         cy.wait(5000); // nerodė žaidėjų nes per greit užsikrovė, todėl reikia duot palaukt
         cy.intercept('GET','/api/player/playersByGame*').as(`arq`)
         cy.get('.banner-menu__build-button').first().click()
-        cy.wait('@arq',{responseTimeout:30000}).its('response.body').should('not.be.null'); // kai atsiranda erroras dėl laukimo
+        cy.wait('@arq',{responseTimeout:3000}).its('response.body').should('not.be.null'); // kai atsiranda erroras dėl laukimo
         cy.get('.build-form__tab').eq(1).click()
         cy.wait(2000);
         cy.get('.icon.icon-add').eq(0).click()
