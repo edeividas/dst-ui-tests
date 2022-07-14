@@ -1,4 +1,4 @@
-describe('BB+widgets' , function ()
+describe('BBv2' , function ()
 {
     it('player search field', function () {
         cy.visit('https://widgets-bm.dev.digitalsportstech.com/betbuilder?sb=test&demo=true')
