@@ -1,4 +1,4 @@
-describe('BB+widgets' , function ()
+describe('BBv2' , function ()
 {
     it('press stats button', function () {
         cy.visit('https://widgets-bm.dev.digitalsportstech.com/betbuilder?sb=test&demo=true')

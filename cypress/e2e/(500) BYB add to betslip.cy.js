@@ -1,4 +1,4 @@
-describe('BB+widgets' , function ()
+describe('BBv2' , function ()
 {
     it('clear button in BYB', function () {
         cy.visit('https://widgets-bm.dev.digitalsportstech.com/betbuilder?sb=test&demo=true')
@@ -9,7 +9,7 @@ describe('BB+widgets' , function ()
         cy.get('.icon.icon-add').eq(0).click()
         cy.get('.build-form__statistics-head').click()
         cy.wait(2000)
-        cy.get('.build-form__statistics-item').eq(1).click()
+        cy.get('.build-form__statistics-item').eq(0).click()
         cy.get('.build-form__counter-plus').click()
         cy.get('.build-form__button').click()
         
