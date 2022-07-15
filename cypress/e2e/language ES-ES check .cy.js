@@ -5,8 +5,10 @@ describe('Cheks Assets language ', () => {
 
         cy.wait('@lang').its('response.statusCode').should('eql', 200);
         cy.get('@lang').then((response) => {
-            expect(response.body).to.not.be.null
+
             cy.get('div > .header-info__item').contains('Boleto')
+            cy.get(' .main-navigation__item > p.cap').should('have.text', 'Mis apuestas')
+            cy.get('.header__logo > p').contains('Construir Props')
         })
 
     })
