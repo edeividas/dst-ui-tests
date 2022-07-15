@@ -10,5 +10,6 @@ describe('Language check', () => {
         cy.get('div > .header-info__item').contains('Boleto')
         cy.get(' .main-navigation__item > p.cap').should('have.text', 'Mis apuestas')
         cy.get('.header__logo > p').contains('Construir Props')
+        cy.get('.header-info__item').contains('Acumuladas Especiales Cuotas:')
     })
 })
