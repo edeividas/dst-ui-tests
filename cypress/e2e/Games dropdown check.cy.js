@@ -27,7 +27,6 @@ describe('Check Games dropdown menu work on UI', () => {
                         cy.log(JSON.stringify(data[i].activeGames))
                         cy.log(JSON.stringify(data[i].acronym))
 
-
                     }
 
                 }
