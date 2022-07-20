@@ -1,4 +1,4 @@
-describe('Betbuilder - place bet wager for 1 dollar', function () {
+ describe('Betbuilder - place bet wager for 1 dollar', function () {
 
     it('navigate and open a category/game', function () {
         cy.visit('/betbuilder?sb=test&demo=test');
