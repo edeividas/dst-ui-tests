@@ -22,11 +22,9 @@ describe('Check Games dropdown menu work on UI', () => {
                         activeGamesCount = data[i].activeGames
                         league = data[i].acronym
 
-
                         cy.log(JSON.stringify(data[i].isDefault))
                         cy.log(JSON.stringify(data[i].activeGames))
                         cy.log(JSON.stringify(data[i].acronym))
-
                     }
 
                 }
