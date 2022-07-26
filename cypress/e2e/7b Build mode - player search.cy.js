@@ -1,6 +1,6 @@
-describe('BB+widgets' , function ()
+describe('Checks Build mode search player field' , function ()
 {
-    it('player search field', function () {
+    it('player search field ', function () {
         cy.visit('https://widgets-bm.dev.digitalsportstech.com/betbuilder?sb=test&demo=true')
         cy.wait(1000);
         cy.get('.banner-menu__build-button').click()

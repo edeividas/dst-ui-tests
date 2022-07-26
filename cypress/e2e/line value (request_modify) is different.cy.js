@@ -37,7 +37,7 @@ describe('Checks O/U different line response',() => {
 
         }).as('req')
 
-        cy.get('.over-under-block__selector').contains('Over').first()
+        cy.get('.over-under-block__selector').first()
         cy.get('.over-under-block__selector-value').first().click()
         cy.get('.wager').type(1)
         cy.wait(2000)

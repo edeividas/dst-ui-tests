@@ -18,6 +18,9 @@ describe('Checks selected statistic ar show all', () => {
                    if (kiek > 1) {
                        cy.get('.games-selection__select').click()
                        cy.get('.games-selection__dropdown').first().click()
+                       cy.get('app-game-filter-title > div > div').its('length')
+                           .should('be.greaterThan',0)
+
 
                    }
                    if( kiek  === 0) {
