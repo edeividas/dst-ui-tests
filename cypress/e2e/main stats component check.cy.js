@@ -10,20 +10,25 @@ describe('Checks selected statistic ar show all', () => {
 
                 if(kiek === 1) {
                     cy.log(kiek)
+                    cy.wait(2000)
                     cy.get('.main-stats__item')
                         .first()
                         .should('have.class','main-stat--open')
+                    cy.wait(2000)
                     cy.get('.markets-block')
                         .should('have.length.greaterThan',1)
+                    cy.wait(2000)
                 }
                 if (kiek > 1) {
 
                     cy.get('.games-selection__select').click()
+                    cy.wait(1000)
                     cy.get('.games-selection__dropdown').first().click()
+                    cy.wait(1000)
                     cy.get('.main-stats__item')
                         .first()
                         .should('have.class','main-stat--open')
-                    cy.get('.markets-block')
+                    cy.get('.tiered-block')
                         .should('have.length.greaterThan',1)
 
                 }
