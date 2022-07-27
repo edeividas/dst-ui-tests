@@ -1,4 +1,4 @@
-describe('Checks dds format toggle Decimal/American',() => {
+describe('Checks odds format toggle Decimal/American',() => {
 
    it('Checks odds american format ',  () => {
        cy.visit('/betbuilder?sb=test&demo=test&user=demo&oddsType=american')
