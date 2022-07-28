@@ -2,6 +2,7 @@ describe('Checks selected statistic ar show all', () => {
     it('checks selected market',() => {
         cy.visit('/betbuilder?sb=test&demo=test&user=demo')
         cy.get('.ligues-slider__item--selected')
+
         const kiek =  cy.get('div.ligues-slider__item--selected > .ligues-slider__count ')
             .invoke('text')
             .then(parseInt)

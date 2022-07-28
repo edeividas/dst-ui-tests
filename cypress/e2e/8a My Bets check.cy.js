@@ -23,7 +23,6 @@ describe('Checks access to mybets ',() => {
         cy.wait('@res').its('response.body').should('be.an', 'object')
             .then((obj) => {
 
-                let details = obj;
 
                 const value1 = JSON.stringify(obj.options.totalPagesCount)
                 cy.log(JSON.stringify(value1))
@@ -39,7 +38,7 @@ describe('Checks access to mybets ',() => {
             cy.wait('@res1').its('response.body').should('be.an', 'object')
                 .then((obj) => {
 
-                    let details = obj;
+
 
                     const value1 = JSON.parse(obj.options.totalItemsCount)
 
