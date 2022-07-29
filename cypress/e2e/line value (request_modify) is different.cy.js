@@ -49,7 +49,7 @@ describe('Checks O/U different line response',() => {
                 cy.log(response.body);
             })
         cy.wait(5000)
-        cy.get('.errored > span').should('have.text','Unable to place a bet. ')
+        cy.get('.errored > span').should('have.text','Unable to place a bet. conditionValue should match the line value "25.5"')
         cy.get('[style="font-size: 16px;"]').should('have.text', '1 Bet not placed.')
         cy.get('.errorText > :nth-child(3)').should('have.text','Please review.')
 

@@ -42,8 +42,6 @@ describe('Build mode  - "Build Mode button check"', () => {
                         }
                     })
 
-
-
             })
     })
 })

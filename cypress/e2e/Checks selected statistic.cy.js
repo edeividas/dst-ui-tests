@@ -23,7 +23,7 @@ describe('Checks selected statistic ar show all', () => {
 
 
                    }
-                   if( kiek  === 0) {
+                   if( kiek  === 0 ) {
 
                        cy.log("Something wrong - No games on League")
 

@@ -66,6 +66,7 @@
     it('placed the bet successfully', function () {
         cy.log('checking if it placed and shows successful confirmation');
         cy.get('.success'); // just checks for a "success" class anywhere
+
     });
 
     it('fetched max exposure after place bet', function () {

@@ -19,18 +19,20 @@ describe('Checks selected statistic ar show all', () => {
                     cy.get('.markets-block')
                         .should('have.length.greaterThan',1)
                     cy.wait(2000)
+                    cy.log('Games count on this League is:' + ' ' + kiek)
                 }
                 if (kiek > 1) {
 
                     cy.get('.games-selection__select').click()
                     cy.wait(1000)
-                    cy.get('.games-selection__dropdown').first().click()
-                    cy.wait(1000)
-                    cy.get('.main-stats__item')
-                        .first()
-                        .should('have.class','main-stat--open')
+                    cy.get('app-game-filter-title > :nth-child(1) > :nth-child(2)').first().click()
+                 //   cy.wait(2000)
+                //    cy.get('app-game-filter-title')
+                    //    .first()
+                   //     .should('have.class','main-stat--open')
                     cy.get('.tiered-block')
                         .should('have.length.greaterThan',1)
+                    cy.log('Games count on this League is:' + ' ' + kiek)
 
                 }
                 else {
