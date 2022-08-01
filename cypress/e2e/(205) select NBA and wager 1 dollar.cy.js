@@ -3,9 +3,9 @@ describe('Betbuilder - select NBA and place wager for 1 dollar', function () {
         cy.visit('/betbuilder?sb=test&demo=true');
         cy.wait(3000); // delay for BB page to load up
         //edited
-        cy.get('.ligues-slider').contains('NBA').click().as('isNBA')
-       // cy.get('.ligues-slider__item--selected').find('.ligues-slider__ligue-name')
-       //     .as('isNBA');
+       // cy.get('.ligues-slider').contains('NBA').click().as('isNBA')
+        cy.get('.ligues-slider__item--selected').find('.ligues-slider__ligue-name')
+            .as('isNBA');
         cy.get('@isNBA').invoke('text').then(text => {
             if (text.trim() === 'NBA') {
                 cy.log('NBA is selected');
