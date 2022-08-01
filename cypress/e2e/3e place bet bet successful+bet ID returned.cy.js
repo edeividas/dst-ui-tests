@@ -42,6 +42,7 @@ describe('Place bet: checks bet successful + bet ID response', () => {
                     cy.get('@betid').should('not.be.null')
                         .should('match',/^[0-9]*[1-9][0-9]*$/) //regex for positive integers
 
+
                 }
 
             })
