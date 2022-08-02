@@ -25,6 +25,7 @@ describe('Bet placement (intercept & mockup response for changed ODDS)', () => {
                     cy.get('.wager').type(1)
                     cy.get('.bat-slip__item__block-btn__btn').click()
                     cy.get('.btn-confirm').click()
+                    cy.wait(1000)
 
 
                     cy.wait('@bet').its('response.statusCode').should('eq', 400)
@@ -58,6 +59,6 @@ describe('Bet placement (intercept & mockup response for changed ODDS)', () => {
 
                 }
 
-                })
+            })
     })
 })

@@ -1,18 +1,1 @@
-{
-  "sportbookUser": "demokk",
-  "amount": 10,
-  "currency": "USD",
-  "odds": 1000,
-  "events": [{
-    "type": 18,
-    "game1Id": 163532,
-    "statisticId": 2174,
-    "statisticTitle": "Pass Completions",
-    "conditionType": 3,
-    "conditionValue": 225.5,
-    "player1Id": 124625
-  }],
-  "verificationType": 1,
-  "sb": "test",
-  "group": "bb"
-}
+{"id":3021483,"created":"2022-08-02 10:55:29","verified":null,"amount":1,"isAccumulator":0,"status":3,"odds":1.88,"sportbookId":30,"events":[{"id":5050014,"type":18,"statistic":{"id":2105,"title":"Strikeouts","phraseTitle":["strikeout","strikeouts"],"value":4000.5,"condition":3},"settlement":{"result":"Pending","voidReason":null,"value":[0]},"player1":{"id":245043,"name":"Arthur Warren"},"team1":{"id":4537,"title":"Cincinnati Reds","abbreviation":"CIN"},"game1":{"id":160115,"date":"2022-08-02 22:40:00","status":1,"sportId":5,"homeTeam":{"id":4534,"title":"Miami Marlins","abbreviation":"MIA"},"visitingTeam":{"id":4537,"title":"Cincinnati Reds","abbreviation":"CIN"}},"odds":1.88}],"user":{"uid":"deividas1"},"interceptor":null,"currency":"USD","notice":null,"verificationType":"1","title":"","info":null,"product":null}
