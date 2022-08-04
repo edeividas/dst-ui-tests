@@ -10,6 +10,7 @@ describe('Acca Bet Placement', () => {
                 cy.log(kiek)
 
                 if (kiek === 1) {
+
                     cy.log(kiek)
                    // cy.get('.games-selection__select').click()
                     cy.wait(1000)
