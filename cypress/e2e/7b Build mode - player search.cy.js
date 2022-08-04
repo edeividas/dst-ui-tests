@@ -5,8 +5,9 @@ describe('Checks Build mode search player field' , function ()
         cy.wait(1000);
         cy.get('.banner-menu__build-button').click()
         cy.get('.games-selection').click()
-        cy.get('app-game-filter-title > :nth-child(1) > :nth-child(2)').click()
-        cy.wait(1000)
+        cy.wait(2000)
+        cy.get('app-game-filter-title > :nth-child(1) > :nth-child(1)').click({force:true})
+       // cy.wait(2000)
         cy.intercept('GET','**/api/player/playersByGame*').as(`res`)
         cy.wait('@res').its('response.body').should('be.an','array')
             .then((response) => {
