@@ -16,6 +16,7 @@ describe('Bet placement (intercept & mockup response for changed ODDS)', () => {
                     cy.get('.over-under-block__selector').first().click()
                     cy.get('.bat-slip__content').should('be.visible')
                     cy.wait('@res').its('response.statusCode').should('eq', 200)
+                    cy.get('.error__text > p').click()
                     cy.get('.wager').type(3)
                     cy.get('.error__text > p').should('contain.text','Max wager exceeded. Limit for this bet is $2')
 
@@ -32,6 +33,7 @@ describe('Bet placement (intercept & mockup response for changed ODDS)', () => {
                     cy.get('.over-under-block__selector').first().click()
                     cy.get('.bat-slip__content').should('be.visible')
                     cy.wait('@res').its('response.statusCode').should('eq', 200)
+                    cy.get('.error__text > p').click()
                     cy.get('.wager').type(3)
                     cy.wait(1000)
                     cy.get('.error__text > p').should('contain.text', 'Max wager exceeded. Limit for this bet is $2')
