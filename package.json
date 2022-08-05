@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test2": "cypress run --spec cypress/e2e/testDFM.cy.js"
+    "test2": "cypress run --spec cypress/e2e/testDFM(example).cy.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^10.3.1"
+    "cypress": "^10.4.0"
   }
 }
