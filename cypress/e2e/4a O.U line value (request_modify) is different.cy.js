@@ -20,10 +20,11 @@ describe('Checks O/U different line response',() => {
         cy.get('.over-under-block__selector').first()
         cy.get('.over-under-block__selector-value').first().click()
         cy.get('.wager').type(1)
+        cy.get('.bat-slip__item__block-btn__btn').click()
         cy.wait('@betPlace').its('response.statusCode').should('eq', 400)
         cy.get('.bat-slip__item__block-btn__btn').click()
         cy.wait(2000)
-        cy.wait('@betPlace').its('response.statusCode').should('eq', 400)
+
        // cy.wait('@req')
       //  cy.get('.bat-slip__item__block-btn__btn').click()
        // cy.wait('@betPlace')
