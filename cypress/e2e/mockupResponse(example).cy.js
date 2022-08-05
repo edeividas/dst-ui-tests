@@ -13,5 +13,6 @@ describe('mockupResponse' , function ()
         cy.visit('/betbuilder?sb=test&demo=test');
         cy.wait('@league').its('response.body').should('not.be.null');
         cy.get('.ds-placeholder').find('p').contains('No games available');
+
     })
 })
