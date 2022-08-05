@@ -25,6 +25,7 @@ describe('Acca Bet Placement', () => {
                     cy.get('.wager').first().type(1)
                     cy.intercept('POST', '**/api/bet?*').as('bet')
 
+
                     cy.get('.bat-slip__accumulator__btn').click({force: true})
                     cy.get('.btn-confirm').click({force: true})
                     cy.wait(3000)
