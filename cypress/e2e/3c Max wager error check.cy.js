@@ -1,4 +1,4 @@
-describe('Checks maxWager error mee=saage', () => {
+describe('Checks maxWager error message', () => {
     it('bet 9999 wager and get an error', () => {
         cy.visit('/betbuilder?sb=test&demo=test&user=demo')
         cy.wait(1000)
