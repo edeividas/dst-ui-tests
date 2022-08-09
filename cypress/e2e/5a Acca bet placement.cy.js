@@ -12,7 +12,7 @@ describe('Acca Bet Placement', () => {
                 if (kiek === 1) {
 
                     cy.log(kiek)
-                   // cy.get('.games-selection__select').click()
+                   /// cy.get('.games-selection__select').click()
                     cy.wait(1000)
                    // cy.get('app-game-filter-title > :nth-child(1) > :nth-child(2)').first().click()
                    // cy.wait(2000)
