@@ -1,26 +1,42 @@
-# Check out my blog post about this topic at https://medium.com/@ondrej.janosik42/setting-up-bitbucket-pipelines-with-proper-caching-of-npm-and-cypress-74d033888186
-image: node:10.8.0
+image: cypress/base:10
 options:
-  max-time: 30
+  max-time: 10
+  
+# job definition for running E2E tests in parallel
+e2e: &e2e
+  name: E2E tests
+  caches:
+    - node
+    - cypress
+  script:
+    - npx @bahmutov/print-env BITBUCKET
+    - npm run start:ci &
+    - npm run e2e:record -- --parallel --ci-build-id $BITBUCKET_BUILD_NUMBER
+  artifacts:
+    # store any generates images and videos as artifacts
+    - cypress/screenshots/**
+    - cypress/videos/**
+    
 pipelines:
   default:
   - step:
-      name: Install, build and tests
-      caches:
-        - npm
-      script:
-        - npm ci
-        - npm run build
-        - npm run test
-  - step:
-      name: E2E tests
+      name: Install dependencies
       caches:
         - npm
         - cypress
-      image: cypress/base:10
+        - node
       script:
         - npm ci
-        - npm run e2e
+        # let's see the environment variables right away
+        - npx @bahmutov/print-env BITBUCKET
+  - parallel:
+    # run N steps in parallel
+    - step:
+        <<: *e2e    
+    - step:
+        <<: *e2e
+    - step:
+        <<: *e2e
 definitions:
   caches:
     npm: $HOME/.npm
