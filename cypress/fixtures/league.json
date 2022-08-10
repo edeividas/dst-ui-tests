@@ -1,0 +1,12 @@
+[{
+  "_id": "61b07d7042f9ae8c4a67ed0f",
+  "id": 123,
+  "sb": "test",
+  "__v": 0,
+  "acronym": "NBA",
+  "isActive": true,
+  "isDefault": true,
+  "sportId": 2,
+  "title": "National Basketball Assoc.",
+  "activeGames": 0
+}]
