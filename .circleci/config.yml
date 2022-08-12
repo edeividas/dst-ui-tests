@@ -1,4 +1,4 @@
-version: 2.1
+gitversion: 2.1
 orbs:
   # use latest 1.x.y version of the orb
   # best practice is to use an exact version
